@@ -1,0 +1,10 @@
+main.cpp: In function 'void sub()':
+main.cpp:852:13: error: expected initializer before '/' token
+  852 |         ll n/2=d;
+      |             ^
+main.cpp:858:31: error: 'd' was not declared in this scope
+  858 |                         v[b]=(d%2);
+      |                               ^
+main.cpp:863:22: error: 'd' was not declared in this scope
+  863 |                 v[0]=d%2;
+      |                      ^

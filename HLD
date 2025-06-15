@@ -1,0 +1,109 @@
+struct HLD {
+    int n;
+    vector<int> siz, top, dep, parent, in, out, seq;
+    vector<vector<int>> adj;
+    int cur;
+    HLD() {}
+    HLD(int n) {
+        init(n);
+    }
+    void init(int n) {//初期化
+        this->n = n;
+        siz.resize(n);//部分木のサイズ
+        top.resize(n);//列の先頭
+        dep.resize(n);//深さ
+        parent.resize(n);//親
+        in.resize(n); //新しい番号
+        out.resize(n);//部分木の最後の番号+1
+        seq.resize(n);//order iの頂点はseq[i]
+        cur = 0;
+        adj.assign(n, {});//隣接リスト
+    }
+    void add(int u, int v) {//辺を追加
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+    void work(int root = 0) {//ビルド
+        top[root] = root;
+        dep[root] = 0;
+        parent[root] = -1;
+        dfs1(root);
+        dfs2(root);
+    }
+    void dfs1(int u) {
+        if (parent[u] != -1) {
+            adj[u].erase(find(adj[u].begin(), adj[u].end(), parent[u]));
+	    //親を隣接リストから消す
+        }
+        siz[u] = 1;
+        for (auto &v : adj[u]) {
+            parent[v] = u;
+            dep[v] = dep[u] + 1;
+            dfs1(v);
+            siz[u] += siz[v];
+	    //adj[u][0]をheavyになるようにする
+            if (siz[v] > siz[adj[u][0]]) {
+                swap(v, adj[u][0]);
+            }
+        }
+    }
+    void dfs2(int u) {
+        in[u] = cur++;//新しい番号を割り振る
+        seq[in[u]] = u;//order in[u]の頂点はu
+        for (auto v : adj[u]) {
+            top[v] = v == adj[u][0] ? top[u] : v;
+            dfs2(v);
+        }
+        out[u] = cur;
+    }
+    int lca(int u, int v) {
+        while (top[u] != top[v]) {//同じ列でない間
+            if (dep[top[u]] > dep[top[v]]) {//深い方から上る
+                u = parent[top[u]];
+            } else {
+                v = parent[top[v]];
+            }
+        }
+        return dep[u] < dep[v] ? u : v;
+    }
+    int dist(int u, int v) {
+        return dep[u] + dep[v] - 2 * dep[lca(u, v)];
+    }
+    int jump(int u, int k) {
+        if (dep[u] < k) {
+            return -1;
+        }
+        int d = dep[u] - k;
+        while (dep[top[u]] > d) {
+            u = parent[top[u]];
+        }
+        return seq[in[u] - dep[u] + d];
+    }
+    bool isAncester(int u, int v) {
+        return in[u] <= in[v] && in[v] < out[u];
+    }
+    int rootedChild(int u, int v) {
+        if (u == v) {
+            return u;
+        }
+        if (!isAncester(u, v)) {
+            return parent[u];
+        }
+        auto it = std::upper_bound(adj[u].begin(), adj[u].end(), v, [&](int x, int y) {
+            return in[x] < in[y];
+        }) - 1;
+        return *it;
+    }
+    int rootedSize(int u, int v) {
+        if (u == v) {
+            return n;
+        }
+        if (!isAncester(v, u)) {
+            return siz[v];
+        }
+        return n - siz[rootedChild(v, u)];
+    }
+    int rootedLca(int a, int b, int c) {
+        return lca(a, b) ^ lca(b, c) ^ lca(c, a);
+    }
+};

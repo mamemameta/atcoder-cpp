@@ -1,0 +1,28 @@
+./main.cpp: In function 'void sub()':
+./main.cpp:1558:25: error: expected ';' before '{' token
+ 1558 |                 e[a].pub{{b,c}};
+      |                         ^
+./main.cpp:30:13: error: statement cannot resolve address of overloaded function
+   30 | #define pub push_back
+./main.cpp:1558:22: note: in expansion of macro 'pub'
+ 1558 |                 e[a].pub{{b,c}};
+      |                      ^~~
+./main.cpp:1559:25: error: expected ';' before '{' token
+ 1559 |                 e[b].pub{{a,c}};
+      |                         ^
+./main.cpp:30:13: error: statement cannot resolve address of overloaded function
+   30 | #define pub push_back
+./main.cpp:1559:22: note: in expansion of macro 'pub'
+ 1559 |                 e[b].pub{{a,c}};
+      |                      ^~~
+./main.cpp:1572:10: error: no match for call to '(sub()::<lambda(long long int, long long int)>) (int)'
+ 1572 |         f(0);
+      |         ~^~~
+./main.cpp:1564:16: note: candidate: 'sub()::<lambda(long long int, long long int)>'
+ 1564 |         auto f=[&](ll now,ll pre)->ll
+      |                ^
+./main.cpp:1564:16: note:   candidate expects 2 arguments, 1 provided
+./main.cpp: In lambda function:
+./main.cpp:1580:25: error: use of 'dfs' before deduction of 'auto'
+ 1580 |                         dfs(to,now,d+c);
+      |                         ^~~

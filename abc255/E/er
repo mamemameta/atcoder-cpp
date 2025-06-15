@@ -1,0 +1,4 @@
+main.cpp: In function 'void sub()':
+main.cpp:678:21: error: 's' was not declared in this scope
+  678 |                 ss-=s[i-1];
+      |                     ^

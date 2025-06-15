@@ -1,0 +1,47 @@
+int modl[5] = { 10000019,10000079,10000103,10000121,10000139};
+struct Hash{
+	vll h;
+	Hash(st s):h(5)
+	{
+		for(ll i=0;i<s.sz;++i)
+		{
+			ll x=s[i]-'0';
+			j(5)
+			{
+				h[j]*=10;
+				h[j]+=x;
+				h[j]%=modl[j];
+			}
+		}
+	}
+	bool operator<(const Hash& r)const
+	{
+		i(5)
+		{
+			if(h[i]!=r.h[i])
+			{
+				return h[i]<r.h[i];
+			}
+		}
+		return false;
+	};
+	bool operator==(const Hash& r)const
+	{
+		bool ok=1;
+		i(5)
+		{
+			ok&=h[i]==r.h[i];
+		}
+		return ok;
+	}
+	Hash op(const Hash r)
+	{
+		Hash a("0");
+		i(5)
+		{
+			a.h[i]=(h[i]*r.h[i])%modl[i];
+		}
+		return a; 
+	};
+};
+*/

@@ -1,0 +1,4 @@
+./main.cpp: In function 'void sub()':
+./main.cpp:1590:35: error: 'class std::deque<long long int>' has no member named 'push'
+ 1590 |                                 q.push(to);
+      |                                   ^~~~

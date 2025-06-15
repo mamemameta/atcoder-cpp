@@ -1,0 +1,48 @@
+In file included from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/alloc_traits.h:33,
+                 from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ext/alloc_traits.h:34,
+                 from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/basic_string.h:39,
+                 from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/string:54,
+                 from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/locale_classes.h:40,
+                 from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/ios_base.h:41,
+                 from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ios:44,
+                 from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/ostream:40,
+                 from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/iostream:41,
+                 from main.cpp:1:
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_construct.h: In instantiation of 'void std::_Construct(_Tp*, _Args&& ...) [with _Tp = tst; _Args = {}]':
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_uninitialized.h:643:18:   required from 'static _ForwardIterator std::__uninitialized_default_n_1<_TrivialValueType>::__uninit_default_n(_ForwardIterator, _Size) [with _ForwardIterator = tst*; _Size = long unsigned int; bool _TrivialValueType = false]'
+  643 |                 std::_Construct(std::__addressof(*__cur));
+      |                 ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_uninitialized.h:712:20:   required from '_ForwardIterator std::__uninitialized_default_n(_ForwardIterator, _Size) [with _ForwardIterator = tst*; _Size = long unsigned int]'
+  710 |       return __uninitialized_default_n_1<__is_trivial(_ValueType)
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  711 |                                          && __can_fill>::
+      |                                          ~~~~~~~~~~~~~~~~
+  712 |         __uninit_default_n(__first, __n);
+      |         ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_uninitialized.h:779:44:   required from '_ForwardIterator std::__uninitialized_default_n_a(_ForwardIterator, _Size, allocator<_Tp>&) [with _ForwardIterator = tst*; _Size = long unsigned int; _Tp = tst]'
+  779 |     { return std::__uninitialized_default_n(__first, __n); }
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_vector.h:1720:36:   required from 'void std::vector<_Tp, _Alloc>::_M_default_initialize(size_type) [with _Tp = tst; _Alloc = std::allocator<tst>; size_type = long unsigned int]'
+ 1720 |           std::__uninitialized_default_n_a(this->_M_impl._M_start, __n,
+      |           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1721 |                                            _M_get_Tp_allocator());
+      |                                            ~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_vector.h:558:9:   required from 'std::vector<_Tp, _Alloc>::vector(size_type, const allocator_type&) [with _Tp = tst; _Alloc = std::allocator<tst>; size_type = long unsigned int; allocator_type = std::allocator<tst>]'
+  558 |       { _M_default_initialize(__n); }
+      |         ^~~~~~~~~~~~~~~~~~~~~
+main.cpp:1557:17:   required from here
+ 1557 |         vector<tst> v(n);
+      |                        ^
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_construct.h:119:7: error: no matching function for call to 'tst::tst()'
+  119 |       ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.cpp:1552:9: note: candidate: 'tst::tst(long long int, long long int, long long int)'
+ 1552 |         tst(ll s,ll c,ll p):s(s),c(c),p(p){}
+      |         ^~~
+main.cpp:1552:9: note:   candidate expects 3 arguments, 0 provided
+main.cpp:1550:8: note: candidate: 'constexpr tst::tst(const tst&)'
+ 1550 | struct tst{
+      |        ^~~
+main.cpp:1550:8: note:   candidate expects 1 argument, 0 provided
+main.cpp:1550:8: note: candidate: 'constexpr tst::tst(tst&&)'
+main.cpp:1550:8: note:   candidate expects 1 argument, 0 provided

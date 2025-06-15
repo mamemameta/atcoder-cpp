@@ -1,0 +1,9 @@
+main.cpp: In function 'void sub()':
+main.cpp:644:36: error: 'mx' was not declared in this scope; did you mean 'mxl'?
+  644 |                 mxr[i]=max(sumr[i],mx[i-1]);
+      |                                    ^~
+      |                                    mxl
+main.cpp:649:36: error: 'mx' was not declared in this scope; did you mean 'mxl'?
+  649 |                 mxr[i]=max(suml[i],mx[i+1]);
+      |                                    ^~
+      |                                    mxl

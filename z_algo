@@ -1,0 +1,31 @@
+vector<ll> z_algo(string pattern, string text) {//z algorithm 最長共通接頭辞
+	string str = pattern + "$" + text;
+	ll n = str.length(),np=pattern.size();
+	vector<ll> Z(n+5),ret(n+5);
+	for (ll i = 1,L=0,R=0,j; i < n; ++i) {
+		if (R<i) {
+			L = R = i;
+			while (R<n && str[R-L] == str[R])
+				R++;
+			Z[i] = R-L;
+			if(i>np)
+				ret[i-np-1]=Z[i];
+
+			R--;
+		}else{
+			j= i-L;
+			if (Z[j]<R-i+1){
+				Z[i]=Z[j];
+			}else{
+				L = i;
+				while (R<n && str[R-L] == str[R])
+					R++;
+				Z[i] = R-L;
+				R--;
+			}
+			if(i>np)
+				ret[i-np-1]=Z[i];
+		}
+	}
+	return ret;
+}

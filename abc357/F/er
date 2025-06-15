@@ -1,0 +1,13 @@
+main.cpp: In member function 'lazy::X lazy::query(int, int)':
+main.cpp:994:40: error: 'query_sub' was not declared in this scope
+  994 |         X query(int a, int b) { return query_sub(a, b, 0, 0, n); }
+      |                                        ^~~~~~~~~
+main.cpp: In function 'void sub()':
+main.cpp:1022:35: error: 'struct lazy::A' has no member named 'x'; did you mean 'ax'?
+ 1022 |                                 a.x+=x;
+      |                                   ^
+      |                                   ax
+main.cpp:1024:35: error: 'struct lazy::A' has no member named 'y'; did you mean 'ay'?
+ 1024 |                                 a.y+=x;
+      |                                   ^
+      |                                   ay

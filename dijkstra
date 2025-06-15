@@ -1,0 +1,17 @@
+ll dijkstra(ll start,ll n){//O((n+m)log(n))
+	vector<vector<pair<ll>>>e(n);
+	vector<ll> dis(n+50,MAX);
+	priority_queue<pair<ll,ll>,vector<pair<ll,ll>>,greater<>>q;
+	q.push({0ll,start});
+	dis[start]=0;
+	while(!q.empty()){
+		auto [d,now]=q.top();q.pop();
+		if(dis[now]<d)continue;
+		if(now==n)return dis[now];
+		for(auto[to,cst]:e[now])
+			if(chmin(dis[to],cst+d)){
+			q.push({dis[to],to});
+		}
+	}
+	return -1;
+}

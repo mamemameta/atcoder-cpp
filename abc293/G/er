@@ -1,0 +1,49 @@
+main.cpp: In lambda function:
+main.cpp:685:37: error: expected '{' before ')' token
+  685 |         sort(all(qis),[&](ll i,ll j)) {
+      |                                     ^
+main.cpp: In function 'void sub()':
+main.cpp:685:38: error: expected ';' before '{' token
+  685 |         sort(all(qis),[&](ll i,ll j)) {
+      |                                      ^~
+      |                                      ;
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algobase.h:71,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/string:51,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/locale_classes.h:40,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ios_base.h:41,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ios:44,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:40,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iostream:41,
+                 from main.cpp:1:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/predefined_ops.h: In instantiation of 'constexpr bool __gnu_cxx::__ops::_Iter_comp_iter<_Compare>::operator()(_Iterator1, _Iterator2) [with _Iterator1 = __gnu_cxx::__normal_iterator<long long int*, std::vector<long long int> >; _Iterator2 = __gnu_cxx::__normal_iterator<long long int*, std::vector<long long int> >; _Compare = sub()::<lambda(long long int, long long int)>]':
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1819:14:   required from 'void std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1859:25:   required from 'void std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1950:31:   required from 'void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:4894:18:   required from 'void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = sub()::<lambda(long long int, long long int)>]'
+main.cpp:685:6:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/predefined_ops.h:158:30: error: void value not ignored as it ought to be
+  158 |         { return bool(_M_comp(*__it1, *__it2)); }
+      |                       ~~~~~~~^~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/predefined_ops.h: In instantiation of 'bool __gnu_cxx::__ops::_Val_comp_iter<_Compare>::operator()(_Value&, _Iterator) [with _Value = long long int; _Iterator = __gnu_cxx::__normal_iterator<long long int*, std::vector<long long int> >; _Compare = sub()::<lambda(long long int, long long int)>]':
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1799:20:   required from 'void std::__unguarded_linear_insert(_RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Val_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1827:36:   required from 'void std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1859:25:   required from 'void std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1950:31:   required from 'void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:4894:18:   required from 'void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = sub()::<lambda(long long int, long long int)>]'
+main.cpp:685:6:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/predefined_ops.h:240:30: error: void value not ignored as it ought to be
+  240 |         { return bool(_M_comp(__val, *__it)); }
+      |                       ~~~~~~~^~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/predefined_ops.h: In instantiation of 'bool __gnu_cxx::__ops::_Iter_comp_val<_Compare>::operator()(_Iterator, _Value&) [with _Iterator = __gnu_cxx::__normal_iterator<long long int*, std::vector<long long int> >; _Value = long long int; _Compare = sub()::<lambda(long long int, long long int)>]':
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_heap.h:140:48:   required from 'void std::__push_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare&) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Distance = long int; _Tp = long long int; _Compare = __gnu_cxx::__ops::_Iter_comp_val<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_heap.h:247:23:   required from 'void std::__adjust_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Distance = long int; _Tp = long long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_heap.h:356:22:   required from 'void std::__make_heap(_RandomAccessIterator, _RandomAccessIterator, _Compare&) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1635:23:   required from 'void std::__heap_select(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1910:25:   required from 'void std::__partial_sort(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1926:27:   required from 'void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:1947:25:   required from 'void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<sub()::<lambda(long long int, long long int)> >]'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:4894:18:   required from 'void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<long long int*, vector<long long int> >; _Compare = sub()::<lambda(long long int, long long int)>]'
+main.cpp:685:6:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/predefined_ops.h:196:30: error: void value not ignored as it ought to be
+  196 |         { return bool(_M_comp(*__it, __val)); }
+      |                       ~~~~~~~^~~~~~~~~~~~~~

@@ -1,0 +1,119 @@
+./main.cpp: In function 'void sub()':
+./main.cpp:1554:24: error: expression list treated as compound expression in initializer [-fpermissive]
+ 1554 |         auto v(2,vll(N));
+      |                        ^
+./main.cpp:1554:24: error: no matching function for call to 'std::vector<long long int>::vector(int, std::vector<long long int>)'
+In file included from /opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/vector:66,
+                 from /opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/functional:64,
+                 from ./main.cpp:2:
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:707:9: note: candidate: 'template<class _InputIterator, class> std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&) [with <template-parameter-2-2> = _InputIterator; _Tp = long long int; _Alloc = std::allocator<long long int>]'
+  707 |         vector(_InputIterator __first, _InputIterator __last,
+      |         ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:707:9: note:   template argument deduction/substitution failed:
+./main.cpp:1554:24: note:   deduced conflicting types for parameter '_InputIterator' ('int' and 'std::vector<long long int>')
+ 1554 |         auto v(2,vll(N));
+      |                        ^
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:678:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = long long int; _Alloc = std::allocator<long long int>; allocator_type = std::allocator<long long int>]'
+  678 |       vector(initializer_list<value_type> __l,
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:678:43: note:   no known conversion for argument 1 from 'int' to 'std::initializer_list<long long int>'
+  678 |       vector(initializer_list<value_type> __l,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:659:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&, std::__type_identity_t<_Alloc>&) [with _Tp = long long int; _Alloc = std::allocator<long long int>; std::__type_identity_t<_Alloc> = std::allocator<long long int>]'
+  659 |       vector(vector&& __rv, const __type_identity_t<allocator_type>& __m)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:659:23: note:   no known conversion for argument 1 from 'int' to 'std::vector<long long int>&&'
+  659 |       vector(vector&& __rv, const __type_identity_t<allocator_type>& __m)
+      |              ~~~~~~~~~^~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:640:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&, const allocator_type&, std::false_type) [with _Tp = long long int; _Alloc = std::allocator<long long int>; allocator_type = std::allocator<long long int>; std::false_type = std::false_type]'
+  640 |       vector(vector&& __rv, const allocator_type& __m, false_type)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:640:7: note:   candidate expects 3 arguments, 2 provided
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:635:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&, const allocator_type&, std::true_type) [with _Tp = long long int; _Alloc = std::allocator<long long int>; allocator_type = std::allocator<long long int>; std::true_type = std::true_type]'
+  635 |       vector(vector&& __rv, const allocator_type& __m, true_type) noexcept
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:635:7: note:   candidate expects 3 arguments, 2 provided
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:624:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&, std::__type_identity_t<_Alloc>&) [with _Tp = long long int; _Alloc = std::allocator<long long int>; std::__type_identity_t<_Alloc> = std::allocator<long long int>]'
+  624 |       vector(const vector& __x, const __type_identity_t<allocator_type>& __a)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:624:28: note:   no known conversion for argument 1 from 'int' to 'const std::vector<long long int>&'
+  624 |       vector(const vector& __x, const __type_identity_t<allocator_type>& __a)
+      |              ~~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:620:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>&&) [with _Tp = long long int; _Alloc = std::allocator<long long int>]'
+  620 |       vector(vector&&) noexcept = default;
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:620:7: note:   candidate expects 1 argument, 2 provided
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:601:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = long long int; _Alloc = std::allocator<long long int>]'
+  601 |       vector(const vector& __x)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:601:7: note:   candidate expects 1 argument, 2 provided
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:569:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector(size_type, const value_type&, const allocator_type&) [with _Tp = long long int; _Alloc = std::allocator<long long int>; size_type = long unsigned int; value_type = long long int; allocator_type = std::allocator<long long int>]'
+  569 |       vector(size_type __n, const value_type& __value,
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:569:47: note:   no known conversion for argument 2 from 'std::vector<long long int>' to 'const std::vector<long long int>::value_type&' {aka 'const long long int&'}
+  569 |       vector(size_type __n, const value_type& __value,
+      |                             ~~~~~~~~~~~~~~~~~~^~~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:556:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector(size_type, const allocator_type&) [with _Tp = long long int; _Alloc = std::allocator<long long int>; size_type = long unsigned int; allocator_type = std::allocator<long long int>]'
+  556 |       vector(size_type __n, const allocator_type& __a = allocator_type())
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:556:51: note:   no known conversion for argument 2 from 'std::vector<long long int>' to 'const std::vector<long long int>::allocator_type&' {aka 'const std::allocator<long long int>&'}
+  556 |       vector(size_type __n, const allocator_type& __a = allocator_type())
+      |                             ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:542:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector(const allocator_type&) [with _Tp = long long int; _Alloc = std::allocator<long long int>; allocator_type = std::allocator<long long int>]'
+  542 |       vector(const allocator_type& __a) _GLIBCXX_NOEXCEPT
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:542:7: note:   candidate expects 1 argument, 2 provided
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:531:7: note: candidate: 'std::vector<_Tp, _Alloc>::vector() [with _Tp = long long int; _Alloc = std::allocator<long long int>]'
+  531 |       vector() = default;
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/stl_vector.h:531:7: note:   candidate expects 0 arguments, 2 provided
+./main.cpp:43:19: error: request for member 'rbegin' in 'v.std::vector<long long int>::operator[](((std::vector<long long int>::size_type)i))', which is of non-class type '__gnu_cxx::__alloc_traits<std::allocator<long long int>, long long int>::value_type' {aka 'long long int'}
+   43 | #define rall(x) x.rbegin(),x.rend()
+      |                   ^~~~~~
+./main.cpp:50:21: note: in expansion of macro 'rall'
+   50 | #define rso(v) sort(rall(v))
+      |                     ^~~~
+./main.cpp:1559:17: note: in expansion of macro 'rso'
+ 1559 |                 rso(v[i]);
+      |                 ^~~
+./main.cpp:43:30: error: request for member 'rend' in 'v.std::vector<long long int>::operator[](((std::vector<long long int>::size_type)i))', which is of non-class type '__gnu_cxx::__alloc_traits<std::allocator<long long int>, long long int>::value_type' {aka 'long long int'}
+   43 | #define rall(x) x.rbegin(),x.rend()
+      |                              ^~~~
+./main.cpp:50:21: note: in expansion of macro 'rall'
+   50 | #define rso(v) sort(rall(v))
+      |                     ^~~~
+./main.cpp:1559:17: note: in expansion of macro 'rso'
+ 1559 |                 rso(v[i]);
+      |                 ^~~
+./main.cpp:1563:34: error: invalid types '__gnu_cxx::__alloc_traits<std::allocator<long long int>, long long int>::value_type {aka long long int}[long long int]' for array subscript
+ 1563 |                         sum+=v[i][j];
+      |                                  ^
+./main.cpp: In instantiation of 'void inn(T&) [with T = std::vector<long long int>]':
+./main.cpp:1555:5:   required from here
+ 1555 |         inn(v);
+      |         ~~~^~~
+./main.cpp:45:17: error: 'begin' was not declared in this scope; did you mean 'std::begin'?
+   45 | #define fa(i,v) for(auto &i:v)
+      |                 ^~~
+./main.cpp:85:40: note: in expansion of macro 'fa'
+   85 | template<class T>void inn(T &v){fa(i,v)fa(j,i)cin>>j;}
+      |                                        ^~
+In file included from /opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/string:53,
+                 from /opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/locale_classes.h:40,
+                 from /opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/ios_base.h:41,
+                 from /opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/ios:44,
+                 from /opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/ostream:40,
+                 from /opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/iostream:41,
+                 from ./main.cpp:1:
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/range_access.h:114:37: note: 'std::begin' declared here
+  114 |   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&) noexcept;
+      |                                     ^~~~~
+./main.cpp:45:17: error: 'end' was not declared in this scope; did you mean 'std::end'?
+   45 | #define fa(i,v) for(auto &i:v)
+      |                 ^~~
+./main.cpp:85:40: note: in expansion of macro 'fa'
+   85 | template<class T>void inn(T &v){fa(i,v)fa(j,i)cin>>j;}
+      |                                        ^~
+/opt/homebrew/Cellar/gcc/14.1.0_1/include/c++/14/bits/range_access.h:116:37: note: 'std::end' declared here
+  116 |   template<typename _Tp> const _Tp* end(const valarray<_Tp>&) noexcept;
+      |                                     ^~~

@@ -1,0 +1,10 @@
+main.cpp: In function 'void sub()':
+main.cpp:797:32: error: using typedef-name 'using X = struct S' after 'struct'
+  797 |                         struct X s(1,1,1);
+      |                                ^
+main.cpp:748:15: note: 'using X = struct S' has a previous declaration here
+  748 |         using X=S;
+      |               ^
+main.cpp:797:41: error: expression list treated as compound expression in initializer [-fpermissive]
+  797 |                         struct X s(1,1,1);
+      |                                         ^

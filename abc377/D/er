@@ -1,0 +1,5 @@
+./main.cpp: In function 'void sub()':
+./main.cpp:1584:35: error: 'class std::multiset<long long int>' has no member named 'finde'; did you mean 'find'?
+ 1584 |                         s.erase(s.finde(mp[l]));
+      |                                   ^~~~~
+      |                                   find

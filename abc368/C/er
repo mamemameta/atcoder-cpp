@@ -1,0 +1,7 @@
+./main.cpp: In function 'void sub()':
+./main.cpp:1556:27: error: 'v' was not declared in this scope
+ 1556 |                 for(;r>0&&v[i]>0;)
+      |                           ^
+./main.cpp:1563:30: error: 'v' was not declared in this scope
+ 1563 |                 ll k=max(0ll,v[i])/5;
+      |                              ^

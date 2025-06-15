@@ -1,0 +1,56 @@
+main.cpp: In function 'void sub()':
+main.cpp:866:29: error: 'i' was not declared in this scope
+  866 |         for(ll x=1;x<=1e6;++i)
+      |                             ^
+main.cpp:871:25: error: 'ans' was not declared in this scope; did you mean 'abs'?
+  871 |                         ans+=d*k*(cnt[min(r,1e6)]-cnt[l]);
+      |                         ^~~
+      |                         abs
+main.cpp:871:42: error: no matching function for call to 'min(long long int&, double)'
+  871 |                         ans+=d*k*(cnt[min(r,1e6)]-cnt[l]);
+      |                                       ~~~^~~~~~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/string:51,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/locale_classes.h:40,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ios_base.h:41,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ios:44,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:40,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iostream:41,
+                 from main.cpp:1:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algobase.h:233:5: note: candidate: 'template<class _Tp> constexpr const _Tp& std::min(const _Tp&, const _Tp&)'
+  233 |     min(const _Tp& __a, const _Tp& __b)
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algobase.h:233:5: note:   template argument deduction/substitution failed:
+main.cpp:871:42: note:   deduced conflicting types for parameter 'const _Tp' ('long long int' and 'double')
+  871 |                         ans+=d*k*(cnt[min(r,1e6)]-cnt[l]);
+      |                                       ~~~^~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algobase.h:281:5: note: candidate: 'template<class _Tp, class _Compare> constexpr const _Tp& std::min(const _Tp&, const _Tp&, _Compare)'
+  281 |     min(const _Tp& __a, const _Tp& __b, _Compare __comp)
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algobase.h:281:5: note:   template argument deduction/substitution failed:
+main.cpp:871:42: note:   deduced conflicting types for parameter 'const _Tp' ('long long int' and 'double')
+  871 |                         ans+=d*k*(cnt[min(r,1e6)]-cnt[l]);
+      |                                       ~~~^~~~~~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/functional:67,
+                 from main.cpp:2:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:5775:5: note: candidate: 'template<class _Tp> constexpr _Tp std::min(initializer_list<_Tp>)'
+ 5775 |     min(initializer_list<_Tp> __l)
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:5775:5: note:   template argument deduction/substitution failed:
+main.cpp:871:42: note:   mismatched types 'std::initializer_list<_Tp>' and 'long long int'
+  871 |                         ans+=d*k*(cnt[min(r,1e6)]-cnt[l]);
+      |                                       ~~~^~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:5785:5: note: candidate: 'template<class _Tp, class _Compare> constexpr _Tp std::min(initializer_list<_Tp>, _Compare)'
+ 5785 |     min(initializer_list<_Tp> __l, _Compare __comp)
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_algo.h:5785:5: note:   template argument deduction/substitution failed:
+main.cpp:871:42: note:   mismatched types 'std::initializer_list<_Tp>' and 'long long int'
+  871 |                         ans+=d*k*(cnt[min(r,1e6)]-cnt[l]);
+      |                                       ~~~^~~~~~~
+main.cpp:873:17: error: 'ans' was not declared in this scope; did you mean 'abs'?
+  873 |                 ans-=d*d;
+      |                 ^~~
+      |                 abs
+main.cpp:876:12: error: 'ans' was not declared in this scope; did you mean 'abs'?
+  876 |         ff(ans);
+      |            ^~~
+      |            abs

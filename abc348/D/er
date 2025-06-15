@@ -1,0 +1,12 @@
+main.cpp: In function 'void sub()':
+main.cpp:877:24: error: expected unqualified-id before '>' token
+  877 |                 vec<vll>>vis(h,vll(w,-1));
+      |                        ^~
+main.cpp:878:75: error: could not convert '{nd.std::vector<std::pair<long long int, long long int> >::operator[](((std::vector<std::pair<long long int, long long int> >::size_type)now)).std::pair<long long int, long long int>::first, nd.std::vector<std::pair<long long int, long long int> >::operator[](((std::vector<std::pair<long long int, long long int> >::size_type)now)).std::pair<long long int, long long int>::second, en.std::map<std::pair<long long int, long long int>, long long int>::operator[]((*(const std::map<std::pair<long long int, long long int>, long long int>::key_type*)(& nd.std::vector<std::pair<long long int, long long int> >::operator[](((std::vector<std::pair<long long int, long long int> >::size_type)now)))))}' from '<brace-enclosed initializer list>' to 'std::deque<std::tuple<long long int, long long int, long long int> >'
+  878 |                 deque<tuple<ll,ll,ll>>q={nd[now].fi,nd[now].se,en[nd[now]]};
+      |                                                                           ^
+      |                                                                           |
+      |                                                                           <brace-enclosed initializer list>
+main.cpp:892:52: error: 'vis' was not declared in this scope
+  892 |                                         if(e-1>=0&&vis[yy][xx]==0)
+      |                                                    ^~~

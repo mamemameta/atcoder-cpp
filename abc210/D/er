@@ -1,0 +1,31 @@
+main.cpp: In function 'void sub()':
+main.cpp:647:13: error: no matching function for call to 'std::vector<std::multiset<long long int> >::insert(double)'
+  647 |         v.in(1e18);
+      |         ~~~~^~~~~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/vector:66,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/functional:64,
+                 from main.cpp:2:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1479:9: note: candidate: 'template<class _InputIterator, class> std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::insert(const_iterator, _InputIterator, _InputIterator) [with <template-parameter-2-2> = _InputIterator; _Tp = std::multiset<long long int>; _Alloc = std::allocator<std::multiset<long long int> >]'
+ 1479 |         insert(const_iterator __position, _InputIterator __first,
+      |         ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1479:9: note:   template argument deduction/substitution failed:
+main.cpp:647:13: note:   candidate expects 3 arguments, 1 provided
+  647 |         v.in(1e18);
+      |         ~~~~^~~~~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/vector:72:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/vector.tcc:133:5: note: candidate: 'std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::insert(const_iterator, const value_type&) [with _Tp = std::multiset<long long int>; _Alloc = std::allocator<std::multiset<long long int> >; iterator = std::vector<std::multiset<long long int> >::iterator; const_iterator = std::vector<std::multiset<long long int> >::const_iterator; value_type = std::multiset<long long int>]'
+  133 |     vector<_Tp, _Alloc>::
+      |     ^~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/vector.tcc:133:5: note:   candidate expects 2 arguments, 1 provided
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1390:7: note: candidate: 'std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::insert(const_iterator, value_type&&) [with _Tp = std::multiset<long long int>; _Alloc = std::allocator<std::multiset<long long int> >; iterator = std::vector<std::multiset<long long int> >::iterator; const_iterator = std::vector<std::multiset<long long int> >::const_iterator; value_type = std::multiset<long long int>]'
+ 1390 |       insert(const_iterator __position, value_type&& __x)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1390:7: note:   candidate expects 2 arguments, 1 provided
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1408:7: note: candidate: 'std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::insert(const_iterator, std::initializer_list<_Tp>) [with _Tp = std::multiset<long long int>; _Alloc = std::allocator<std::multiset<long long int> >; iterator = std::vector<std::multiset<long long int> >::iterator; const_iterator = std::vector<std::multiset<long long int> >::const_iterator]'
+ 1408 |       insert(const_iterator __position, initializer_list<value_type> __l)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1408:7: note:   candidate expects 2 arguments, 1 provided
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1434:7: note: candidate: 'std::vector<_Tp, _Alloc>::iterator std::vector<_Tp, _Alloc>::insert(const_iterator, size_type, const value_type&) [with _Tp = std::multiset<long long int>; _Alloc = std::allocator<std::multiset<long long int> >; iterator = std::vector<std::multiset<long long int> >::iterator; const_iterator = std::vector<std::multiset<long long int> >::const_iterator; size_type = long unsigned int; value_type = std::multiset<long long int>]'
+ 1434 |       insert(const_iterator __position, size_type __n, const value_type& __x)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1434:7: note:   candidate expects 3 arguments, 1 provided

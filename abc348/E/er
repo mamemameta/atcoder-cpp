@@ -1,0 +1,11 @@
+main.cpp: In function 'void sub()':
+main.cpp:881:22: error: no matching function for call to 'chmin(long long int&, __gnu_cxx::__alloc_traits<std::allocator<Rerooting::DP>, Rerooting::DP>::value_type&)'
+  881 |                 chmin(ans,g.ans[i]);
+      |                 ~~~~~^~~~~~~~~~~~~~
+main.cpp:191:23: note: candidate: 'template<class T> bool chmin(T&, const T&)'
+  191 | template<class T>bool chmin(T& a, const T& b) { if (b < a) { a = b; return 1; } return 0; }
+      |                       ^~~~~
+main.cpp:191:23: note:   template argument deduction/substitution failed:
+main.cpp:881:22: note:   deduced conflicting types for parameter 'const T' ('long long int' and '__gnu_cxx::__alloc_traits<std::allocator<Rerooting::DP>, Rerooting::DP>::value_type' {aka 'Rerooting::DP'})
+  881 |                 chmin(ans,g.ans[i]);
+      |                 ~~~~~^~~~~~~~~~~~~~

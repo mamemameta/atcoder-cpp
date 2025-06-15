@@ -1,0 +1,32 @@
+./main.cpp: In function 'void sub()':
+./main.cpp:1574:36: warning: range-based 'for' loops with initializer only available with '-std=c++20' or '-std=gnu++20' [-Wc++20-extensions]
+ 1574 |                         for(ll j=0;j<l:++j)
+      |                                    ^
+./main.cpp:1574:39: error: expected ';' before ':' token
+ 1574 |                         for(ll j=0;j<l:++j)
+      |                                       ^
+      |                                       ;
+./main.cpp:1579:17: error: expected primary-expression before '}' token
+ 1579 |                 }
+      |                 ^
+./main.cpp:1578:26: error: expected ';' before '}' token
+ 1578 |                         }
+      |                          ^
+      |                          ;
+ 1579 |                 }
+      |                 ~         
+./main.cpp:1579:17: error: expected primary-expression before '}' token
+ 1579 |                 }
+      |                 ^
+./main.cpp:1578:26: error: expected ')' before '}' token
+ 1578 |                         }
+      |                          ^
+      |                          )
+ 1579 |                 }
+      |                 ~         
+./main.cpp:1574:28: note: to match this '('
+ 1574 |                         for(ll j=0;j<l:++j)
+      |                            ^
+./main.cpp:1579:17: error: expected primary-expression before '}' token
+ 1579 |                 }
+      |                 ^

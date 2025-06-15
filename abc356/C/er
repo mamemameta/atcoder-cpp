@@ -1,0 +1,19 @@
+main.cpp: In function 'void sub()':
+main.cpp:869:31: error: no matching function for call to 'std::vector<std::vector<long long int> >::push_back(long long int&)'
+  869 |                         va.pub(x);
+      |                         ~~~~~~^~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/vector:66,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/functional:64,
+                 from main.cpp:2:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1278:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::vector<long long int>; _Alloc = std::allocator<std::vector<long long int> >; value_type = std::vector<long long int>]'
+ 1278 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1278:35: note:   no known conversion for argument 1 from 'long long int' to 'const std::vector<std::vector<long long int> >::value_type&' {aka 'const std::vector<long long int>&'}
+ 1278 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1295:7: note: candidate: 'void std::vector<_Tp, _Alloc>::push_back(value_type&&) [with _Tp = std::vector<long long int>; _Alloc = std::allocator<std::vector<long long int> >; value_type = std::vector<long long int>]'
+ 1295 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_vector.h:1295:30: note:   no known conversion for argument 1 from 'long long int' to 'std::vector<std::vector<long long int> >::value_type&&' {aka 'std::vector<long long int>&&'}
+ 1295 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~

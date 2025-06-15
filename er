@@ -1,0 +1,21 @@
+main.cpp: In function 'int main()':
+main.cpp:68:35: error: expression list treated as compound expression in functional cast [-fpermissive]
+   68 |         function<void(Node*,string)generate=[&](Node* node,string prefix)
+      |                                   ^
+main.cpp:68:73: error: template argument 1 is invalid
+   68 |         function<void(Node*,string)generate=[&](Node* node,string prefix)
+      |                                                                         ^
+main.cpp:82:17: error: no matching function for call to 'generate(Node*&, const char [1])'
+   82 |         generate(root,"");
+      |         ~~~~~~~~^~~~~~~~~
+In file included from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/algorithm:61,
+                 from main.cpp:7:
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_algo.h:4344:5: note: candidate: 'template<class _FIter, class _Generator> void std::generate(_FIter, _FIter, _Generator)'
+ 4344 |     generate(_ForwardIterator __first, _ForwardIterator __last,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/bits/stl_algo.h:4344:5: note:   candidate expects 3 arguments, 2 provided
+In file included from /opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/algorithm:85:
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/pstl/glue_algorithm_defs.h:200:1: note: candidate: 'template<class _ExecutionPolicy, class _ForwardIterator, class _Generator> __pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void> std::generate(_ExecutionPolicy&&, _ForwardIterator, _ForwardIterator, _Generator)'
+  200 | generate(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Generator __g);
+      | ^~~~~~~~
+/opt/homebrew/Cellar/gcc/14.2.0_1/include/c++/14/pstl/glue_algorithm_defs.h:200:1: note:   candidate expects 4 arguments, 2 provided

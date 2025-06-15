@@ -1,0 +1,5 @@
+main.cpp: In function 'void sub()':
+main.cpp:1017:40: error: 'x' was not declared in this scope; did you mean 'mx'?
+ 1017 |                 sg.update(t,segtree::X(x.mx,-c*t));
+      |                                        ^
+      |                                        mx

@@ -1,0 +1,3 @@
+ls='ls -G'
+run-help=man
+which-command=whence

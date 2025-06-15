@@ -1,0 +1,39 @@
+main.cpp: In function 'void sub()':
+main.cpp:686:47: error: no matching function for call to 'mint::mint(long long int&, long long int&)'
+  686 |                         ll d=max(r,l)-mint(r,l);
+      |                                               ^
+main.cpp:547:9: note: candidate: 'mint::mint(long long int)'
+  547 |         mint(ll m) {
+      |         ^~~~
+main.cpp:547:9: note:   candidate expects 1 argument, 2 provided
+main.cpp:546:9: note: candidate: 'mint::mint()'
+  546 |         mint() :n(0) { ; }
+      |         ^~~~
+main.cpp:546:9: note:   candidate expects 0 arguments, 2 provided
+main.cpp:544:8: note: candidate: 'constexpr mint::mint(const mint&)'
+  544 | struct mint {
+      |        ^~~~
+main.cpp:544:8: note:   candidate expects 1 argument, 2 provided
+main.cpp:544:8: note: candidate: 'constexpr mint::mint(mint&&)'
+main.cpp:544:8: note:   candidate expects 1 argument, 2 provided
+main.cpp:703:47: error: no matching function for call to 'mint::mint(long long int&, long long int&)'
+  703 |                         ll d=max(r,l)-mint(r,l);
+      |                                               ^
+main.cpp:547:9: note: candidate: 'mint::mint(long long int)'
+  547 |         mint(ll m) {
+      |         ^~~~
+main.cpp:547:9: note:   candidate expects 1 argument, 2 provided
+main.cpp:546:9: note: candidate: 'mint::mint()'
+  546 |         mint() :n(0) { ; }
+      |         ^~~~
+main.cpp:546:9: note:   candidate expects 0 arguments, 2 provided
+main.cpp:544:8: note: candidate: 'constexpr mint::mint(const mint&)'
+  544 | struct mint {
+      |        ^~~~
+main.cpp:544:8: note:   candidate expects 1 argument, 2 provided
+main.cpp:544:8: note: candidate: 'constexpr mint::mint(mint&&)'
+main.cpp:544:8: note:   candidate expects 1 argument, 2 provided
+main.cpp:719:17: error: 'chimin' was not declared in this scope; did you mean 'chmin'?
+  719 |                 chimin(le,cst[i]);
+      |                 ^~~~~~
+      |                 chmin

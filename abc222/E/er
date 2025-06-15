@@ -1,0 +1,4 @@
+main.cpp: In function 'void sub()':
+main.cpp:681:28: error: 'x' was not declared in this scope
+  681 |                         dp[x]+=dp[x-ecnt[i]];
+      |                            ^

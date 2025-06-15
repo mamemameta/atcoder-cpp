@@ -1,0 +1,5 @@
+main.cpp: In member function 'void SegTree2::update(int, X)':
+main.cpp:892:34: error: 'fx' was not declared in this scope; did you mean 'ex'?
+  892 |                         dat[i] = fx(dat[i * 2 + 1], dat[i * 2 + 2]);
+      |                                  ^~
+      |                                  ex

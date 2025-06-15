@@ -1,0 +1,491 @@
+main.cpp: In instantiation of 'void ff(T, A ...) [with T = std::vector<long long int>; A = {}]':
+main.cpp:675:4:   required from here
+main.cpp:77:55: error: no match for 'operator<<' (operand types are 'std::ostream' {aka 'std::basic_ostream<char>'} and 'std::vector<long long int>')
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iostream:41,
+                 from main.cpp:1:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:110:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(__ostream_type& (*)(__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  110 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:110:36: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)' {aka 'std::basic_ostream<char>& (*)(std::basic_ostream<char>&)'}
+  110 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:119:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(__ios_type& (*)(__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; __ios_type = std::basic_ios<char>]'
+  119 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:119:32: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)' {aka 'std::basic_ios<char>& (*)(std::basic_ios<char>&)'}
+  119 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:129:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  129 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:129:30: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'std::ios_base& (*)(std::ios_base&)'
+  129 |       operator<<(ios_base& (*__pf) (ios_base&))
+      |                  ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:168:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  168 |       operator<<(long __n)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:168:23: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'long int'
+  168 |       operator<<(long __n)
+      |                  ~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:172:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  172 |       operator<<(unsigned long __n)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:172:32: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'long unsigned int'
+  172 |       operator<<(unsigned long __n)
+      |                  ~~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:176:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  176 |       operator<<(bool __n)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:176:23: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'bool'
+  176 |       operator<<(bool __n)
+      |                  ~~~~~^~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:880:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ostream.tcc:96:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]'
+   96 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ostream.tcc:97:22: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'short int'
+   97 |     operator<<(short __n)
+      |                ~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:183:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  183 |       operator<<(unsigned short __n)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:183:33: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'short unsigned int'
+  183 |       operator<<(unsigned short __n)
+      |                  ~~~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ostream.tcc:110:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]'
+  110 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ostream.tcc:111:20: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'int'
+  111 |     operator<<(int __n)
+      |                ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:194:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  194 |       operator<<(unsigned int __n)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:194:31: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'unsigned int'
+  194 |       operator<<(unsigned int __n)
+      |                  ~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:203:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  203 |       operator<<(long long __n)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:203:28: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'long long int'
+  203 |       operator<<(long long __n)
+      |                  ~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:207:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  207 |       operator<<(unsigned long long __n)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:207:37: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'long long unsigned int'
+  207 |       operator<<(unsigned long long __n)
+      |                  ~~~~~~~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:222:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  222 |       operator<<(double __f)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:222:25: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'double'
+  222 |       operator<<(double __f)
+      |                  ~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:226:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  226 |       operator<<(float __f)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:226:24: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'float'
+  226 |       operator<<(float __f)
+      |                  ~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:234:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  234 |       operator<<(long double __f)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:234:30: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'long double'
+  234 |       operator<<(long double __f)
+      |                  ~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:292:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>]'
+  292 |       operator<<(const void* __p)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:292:30: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'const void*'
+  292 |       operator<<(const void* __p)
+      |                  ~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:297:7: note: candidate: 'std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; __ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t]'
+  297 |       operator<<(nullptr_t)
+      |       ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:297:18: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'std::nullptr_t'
+  297 |       operator<<(nullptr_t)
+      |                  ^~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ostream.tcc:124:5: note: candidate: 'std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; __streambuf_type = std::basic_streambuf<char>]'
+  124 |     basic_ostream<_CharT, _Traits>::
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ostream.tcc:125:34: note:   no known conversion for argument 1 from 'std::vector<long long int>' to 'std::basic_ostream<char>::__streambuf_type*' {aka 'std::basic_streambuf<char>*'}
+  125 |     operator<<(__streambuf_type* __sbin)
+      |                ~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/basic_string.h:47,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/string:54,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/locale_classes.h:40,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ios_base.h:41,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ios:44,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:40:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/string_view:760:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, basic_string_view<_CharT, _Traits>)'
+  760 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/string_view:760:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/basic_string.h:4020:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const __cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 4020 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/basic_string.h:4020:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/memory_resource.h:38,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/string:58:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/cstddef:124:5: note: candidate: 'template<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator<<(byte, _IntegerType)'
+  124 |     operator<<(byte __b, _IntegerType __shift) noexcept
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/cstddef:124:5: note:   template argument deduction/substitution failed:
+main.cpp:77:51: note:   cannot convert 'std::cout' (type 'std::ostream' {aka 'std::basic_ostream<char>'}) to type 'std::byte'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ^~~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ios_base.h:46:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/system_error:339:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const error_code&)'
+  339 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/system_error:339:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'const std::error_code&'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:554:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _CharT)'
+  554 |     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:554:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   deduced conflicting types for parameter '_CharT' ('char' and 'std::vector<long long int>')
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:564:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, char)'
+  564 |     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:564:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'char'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:570:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, char)'
+  570 |     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:570:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'char'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:581:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, signed char)'
+  581 |     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:581:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'signed char'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:586:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, unsigned char)'
+  586 |     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:586:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'unsigned char'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:645:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const _CharT*)'
+  645 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:645:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   mismatched types 'const _CharT*' and 'std::vector<long long int>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ostream.tcc:307:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const char*)'
+  307 |     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ostream.tcc:307:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'const char*'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:662:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const char*)'
+  662 |     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:662:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'const char*'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:675:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const signed char*)'
+  675 |     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:675:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'const signed char*'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:680:5: note: candidate: 'template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(basic_ostream<char, _Traits>&, const unsigned char*)'
+  680 |     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:680:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'const unsigned char*'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:801:5: note: candidate: 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&)'
+  801 |     operator<<(_Ostream&& __os, const _Tp& __x)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:801:5: note:   template argument deduction/substitution failed:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream: In substitution of 'template<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = std::vector<long long int>]':
+main.cpp:77:55:   required from 'void ff(T, A ...) [with T = std::vector<long long int>; A = {}]'
+main.cpp:675:4:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:801:5: error: no type named 'type' in 'struct std::enable_if<false, void>'
+In file included from main.cpp:11:
+main.cpp: In instantiation of 'void ff(T, A ...) [with T = std::vector<long long int>; A = {}]':
+main.cpp:675:4:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bitset:1683:5: note: candidate: 'template<class _CharT, class _Traits, long unsigned int _Nb> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const bitset<_Nb>&)'
+ 1683 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bitset:1683:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::bitset<_Nb>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+In file included from main.cpp:12:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:81:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Resetiosflags)'
+   81 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:81:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'std::_Resetiosflags'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:111:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Setiosflags)'
+  111 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:111:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'std::_Setiosflags'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:145:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Setbase)'
+  145 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:145:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'std::_Setbase'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:180:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Setfill<_CharT>)'
+  180 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:180:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'std::_Setfill<_CharT>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:210:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Setprecision)'
+  210 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:210:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'std::_Setprecision'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:240:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Setw)'
+  240 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:240:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'std::_Setw'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:313:5: note: candidate: 'template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Put_money<_MoneyT>)'
+  313 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:313:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'std::_Put_money<_MoneyT>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:365:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, _Put_time<_CharT>)'
+  365 |     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iomanip:365:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'std::_Put_time<_CharT>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/random:51,
+                 from main.cpp:13:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.h:1341:5: note: candidate: 'template<class _RandomNumberEngine, long unsigned int __w, class _UIntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const independent_bits_engine<_RandomNumberEngine, __w, _UIntType>&)'
+ 1341 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.h:1341:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::independent_bits_engine<_RandomNumberEngine, __w, _UIntType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/random:53:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:907:5: note: candidate: 'template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const uniform_int_distribution<_IntType>&)'
+  907 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:907:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::uniform_int_distribution<_IntType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:965:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const uniform_real_distribution<_IntType>&)'
+  965 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:965:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::uniform_real_distribution<_IntType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2142:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const cauchy_distribution<_RealType>&)'
+ 2142 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2142:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::cauchy_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1026:5: note: candidate: 'template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const bernoulli_distribution&)'
+ 1026 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1026:5: note:   template argument deduction/substitution failed:
+main.cpp:77:57: note:   cannot convert 'a' (type 'std::vector<long long int>') to type 'const std::bernoulli_distribution&'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                         ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1107:5: note: candidate: 'template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const geometric_distribution<_IntType>&)'
+ 1107 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1107:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::geometric_distribution<_IntType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1759:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const exponential_distribution<_RealType>&)'
+ 1759 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1759:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::exponential_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2536:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const weibull_distribution<_RealType>&)'
+ 2536 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2536:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::weibull_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2610:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const extreme_value_distribution<_RealType>&)'
+ 2610 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2610:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::extreme_value_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:156:5: note: candidate: 'template<class _UIntType, _UIntType __a, _UIntType __c, _UIntType __m, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const linear_congruential_engine<_UIntType, __a, __c, __m>&)'
+  156 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:156:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::linear_congruential_engine<_UIntType, __a, __c, __m>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:477:5: note: candidate: 'template<class _UIntType1, long unsigned int __w1, long unsigned int __n1, long unsigned int __m1, long unsigned int __r1, _UIntType1 __a1, long unsigned int __u1, _UIntType1 __d1, long unsigned int __s1, _UIntType1 __b1, long unsigned int __t1, _UIntType1 __c1, long unsigned int __l1, _UIntType1 __f1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>&)'
+  477 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:477:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d, __s, __b, __t, __c, __l, __f>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:632:5: note: candidate: 'template<class _UIntType, long unsigned int __w, long unsigned int __s, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const subtract_with_carry_engine<_UIntType, __w, __s, __r>&)'
+  632 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:632:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::subtract_with_carry_engine<_UIntType, __w, __s, __r>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:701:5: note: candidate: 'template<class _RandomNumberEngine, long unsigned int __p, long unsigned int __r, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const discard_block_engine<_RandomNumberEngine, __p, __r>&)'
+  701 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:701:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::discard_block_engine<_RandomNumberEngine, __p, __r>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:863:5: note: candidate: 'template<class _RandomNumberEngine, long unsigned int __k, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const shuffle_order_engine<_RandomNumberEngine, __k>&)'
+  863 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:863:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::shuffle_order_engine<_RandomNumberEngine, __k>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1221:5: note: candidate: 'template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const negative_binomial_distribution<_IntType>&)'
+ 1221 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1221:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::negative_binomial_distribution<_IntType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1431:5: note: candidate: 'template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const poisson_distribution<_IntType>&)'
+ 1431 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1431:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::poisson_distribution<_IntType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1697:5: note: candidate: 'template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const binomial_distribution<_IntType>&)'
+ 1697 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1697:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::binomial_distribution<_IntType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1917:5: note: candidate: 'template<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const normal_distribution<_RealType>&)'
+ 1917 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1917:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::normal_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1984:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const lognormal_distribution<_RealType>&)'
+ 1984 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:1984:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::lognormal_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2056:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const chi_squared_distribution<_RealType>&)'
+ 2056 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2056:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::chi_squared_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2217:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const fisher_f_distribution<_RealType>&)'
+ 2217 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2217:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::fisher_f_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2291:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const student_t_distribution<_RealType>&)'
+ 2291 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2291:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::student_t_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2460:5: note: candidate: 'template<class _RealType1, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const gamma_distribution<_RealType>&)'
+ 2460 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2460:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::gamma_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2746:5: note: candidate: 'template<class _IntType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const discrete_distribution<_IntType>&)'
+ 2746 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2746:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::discrete_distribution<_IntType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2968:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const piecewise_constant_distribution<_RealType>&)'
+ 2968 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:2968:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::piecewise_constant_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:3174:5: note: candidate: 'template<class _RealType, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const piecewise_linear_distribution<_RealType>&)'
+ 3174 |     operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/random.tcc:3174:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::piecewise_linear_distribution<_RealType>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~
+In file included from main.cpp:15:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/complex:558:5: note: candidate: 'template<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(basic_ostream<_CharT, _Traits>&, const complex<_Tp>&)'
+  558 |     operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+      |     ^~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/complex:558:5: note:   template argument deduction/substitution failed:
+main.cpp:77:55: note:   'std::vector<long long int>' is not derived from 'const std::complex<_Tp>'
+   77 | template<class T,class... A> void ff(T a,A... b){ cout<<a; (cout<<...<<(cout<<' ',b)); cout<<endl; };
+      |                                                   ~~~~^~~

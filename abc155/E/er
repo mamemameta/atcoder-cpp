@@ -1,0 +1,4 @@
+main.cpp: In function 'void sub()':
+main.cpp:653:19: error: 'n' was not declared in this scope
+  653 |         ff(min(dp[n][0],dp[n][1]));
+      |                   ^

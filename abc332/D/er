@@ -1,0 +1,49 @@
+main.cpp: In function 'void sub()':
+main.cpp:651:30: error: no matching function for call to 'std::multiset<long long int>::insert(std::multiset<long long int>::reverse_iterator)'
+  651 |                         mx.in(sch[i].rbe);
+      |                         ~~~~~^~~~~~~~~~~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/set:64,
+                 from main.cpp:4:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:553:9: note: candidate: 'template<class _InputIterator> void std::multiset<_Key, _Compare, _Alloc>::insert(_InputIterator, _InputIterator) [with _Key = long long int; _Compare = std::less<long long int>; _Alloc = std::allocator<long long int>]'
+  553 |         insert(_InputIterator __first, _InputIterator __last)
+      |         ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:553:9: note:   template argument deduction/substitution failed:
+main.cpp:651:30: note:   candidate expects 2 arguments, 1 provided
+  651 |                         mx.in(sch[i].rbe);
+      |                         ~~~~~^~~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:504:7: note: candidate: 'std::multiset<_Key, _Compare, _Alloc>::iterator std::multiset<_Key, _Compare, _Alloc>::insert(const value_type&) [with _Key = long long int; _Compare = std::less<long long int>; _Alloc = std::allocator<long long int>; iterator = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::const_iterator; value_type = long long int]'
+  504 |       insert(const value_type& __x)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:504:32: note:   no known conversion for argument 1 from 'std::multiset<long long int>::reverse_iterator' {aka 'std::reverse_iterator<std::_Rb_tree_const_iterator<long long int> >'} to 'const std::multiset<long long int>::value_type&' {aka 'const long long int&'}
+  504 |       insert(const value_type& __x)
+      |              ~~~~~~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:509:7: note: candidate: 'std::multiset<_Key, _Compare, _Alloc>::iterator std::multiset<_Key, _Compare, _Alloc>::insert(value_type&&) [with _Key = long long int; _Compare = std::less<long long int>; _Alloc = std::allocator<long long int>; iterator = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::const_iterator; value_type = long long int]'
+  509 |       insert(value_type&& __x)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:509:27: note:   no known conversion for argument 1 from 'std::multiset<long long int>::reverse_iterator' {aka 'std::reverse_iterator<std::_Rb_tree_const_iterator<long long int> >'} to 'std::multiset<long long int>::value_type&&' {aka 'long long int&&'}
+  509 |       insert(value_type&& __x)
+      |              ~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:534:7: note: candidate: 'std::multiset<_Key, _Compare, _Alloc>::iterator std::multiset<_Key, _Compare, _Alloc>::insert(const_iterator, const value_type&) [with _Key = long long int; _Compare = std::less<long long int>; _Alloc = std::allocator<long long int>; iterator = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::const_iterator; const_iterator = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::const_iterator; value_type = long long int]'
+  534 |       insert(const_iterator __position, const value_type& __x)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:534:7: note:   candidate expects 2 arguments, 1 provided
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:539:7: note: candidate: 'std::multiset<_Key, _Compare, _Alloc>::iterator std::multiset<_Key, _Compare, _Alloc>::insert(const_iterator, value_type&&) [with _Key = long long int; _Compare = std::less<long long int>; _Alloc = std::allocator<long long int>; iterator = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::const_iterator; const_iterator = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::const_iterator; value_type = long long int]'
+  539 |       insert(const_iterator __position, value_type&& __x)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:539:7: note:   candidate expects 2 arguments, 1 provided
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:565:7: note: candidate: 'void std::multiset<_Key, _Compare, _Alloc>::insert(std::initializer_list<_Tp>) [with _Key = long long int; _Compare = std::less<long long int>; _Alloc = std::allocator<long long int>]'
+  565 |       insert(initializer_list<value_type> __l)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:565:43: note:   no known conversion for argument 1 from 'std::multiset<long long int>::reverse_iterator' {aka 'std::reverse_iterator<std::_Rb_tree_const_iterator<long long int> >'} to 'std::initializer_list<long long int>'
+  565 |       insert(initializer_list<value_type> __l)
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:585:7: note: candidate: 'std::multiset<_Key, _Compare, _Alloc>::iterator std::multiset<_Key, _Compare, _Alloc>::insert(node_type&&) [with _Key = long long int; _Compare = std::less<long long int>; _Alloc = std::allocator<long long int>; iterator = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::const_iterator; node_type = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::node_type]'
+  585 |       insert(node_type&& __nh)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:585:26: note:   no known conversion for argument 1 from 'std::multiset<long long int>::reverse_iterator' {aka 'std::reverse_iterator<std::_Rb_tree_const_iterator<long long int> >'} to 'std::multiset<long long int>::node_type&&' {aka 'std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::node_type&&'}
+  585 |       insert(node_type&& __nh)
+      |              ~~~~~~~~~~~~^~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:590:7: note: candidate: 'std::multiset<_Key, _Compare, _Alloc>::iterator std::multiset<_Key, _Compare, _Alloc>::insert(const_iterator, node_type&&) [with _Key = long long int; _Compare = std::less<long long int>; _Alloc = std::allocator<long long int>; iterator = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::const_iterator; const_iterator = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::const_iterator; node_type = std::_Rb_tree<long long int, long long int, std::_Identity<long long int>, std::less<long long int>, std::allocator<long long int> >::node_type]'
+  590 |       insert(const_iterator __hint, node_type&& __nh)
+      |       ^~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_multiset.h:590:7: note:   candidate expects 2 arguments, 1 provided

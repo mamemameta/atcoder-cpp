@@ -1,0 +1,33 @@
+main.cpp: In lambda function:
+main.cpp:791:35: error: no matching function for call to 'Rerooting::DP::DP(long long int)'
+  791 |         return DP(dp_cum.dp+ d.dp );
+      |                                   ^
+main.cpp:787:9: note: candidate: 'Rerooting::DP::DP(long long int, long long int)'
+  787 |         DP(long long dp_,ll _o) : dp(dp_),order(_o) {}
+      |         ^~
+main.cpp:787:9: note:   candidate expects 2 arguments, 1 provided
+main.cpp:784:12: note: candidate: 'constexpr Rerooting::DP::DP(const Rerooting::DP&)'
+  784 |     struct DP {  // DP の型
+      |            ^~
+main.cpp:784:12: note:   no known conversion for argument 1 from 'long long int' to 'const Rerooting::DP&'
+main.cpp:784:12: note: candidate: 'constexpr Rerooting::DP::DP(Rerooting::DP&&)'
+main.cpp:784:12: note:   no known conversion for argument 1 from 'long long int' to 'Rerooting::DP&&'
+main.cpp: In lambda function:
+main.cpp:794:33: error: no matching function for call to 'Rerooting::DP::DP(long long int)'
+  794 |         return DP(d.dp + d.order);
+      |                                 ^
+main.cpp:787:9: note: candidate: 'Rerooting::DP::DP(long long int, long long int)'
+  787 |         DP(long long dp_,ll _o) : dp(dp_),order(_o) {}
+      |         ^~
+main.cpp:787:9: note:   candidate expects 2 arguments, 1 provided
+main.cpp:784:12: note: candidate: 'constexpr Rerooting::DP::DP(const Rerooting::DP&)'
+  784 |     struct DP {  // DP の型
+      |            ^~
+main.cpp:784:12: note:   no known conversion for argument 1 from 'long long int' to 'const Rerooting::DP&'
+main.cpp:784:12: note: candidate: 'constexpr Rerooting::DP::DP(Rerooting::DP&&)'
+main.cpp:784:12: note:   no known conversion for argument 1 from 'long long int' to 'Rerooting::DP&&'
+main.cpp: At global scope:
+main.cpp:856:5: error: 'DP' does not name a type; did you mean 'P'?
+  856 |     DP operator+(DP a, DP b) {return DP(a.dp+b.dp,a.order+b.order);}
+      |     ^~
+      |     P

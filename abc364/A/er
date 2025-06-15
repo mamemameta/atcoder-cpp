@@ -1,0 +1,5 @@
+./main.cpp: In function 'void sub()':
+./main.cpp:1558:16: error: 'ok' was not declared in this scope; did you mean 'ou'?
+ 1558 |         ll swe=ok-sal;
+      |                ^~
+      |                ou

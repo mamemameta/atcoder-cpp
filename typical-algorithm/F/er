@@ -1,0 +1,254 @@
+main.cpp: In function 'void sub()':
+main.cpp:30:13: error: '__gnu_cxx::__alloc_traits<std::allocator<std::pair<long long int, long long int> >, std::pair<long long int, long long int> >::value_type' {aka 'struct std::pair<long long int, long long int>'} has no member named 'push_back'
+   30 | #define pub push_back
+      |             ^~~~~~~~~
+main.cpp:677:22: note: in expansion of macro 'pub'
+  677 |                 e[u].pub({c,v});
+      |                      ^~~
+main.cpp:30:13: error: '__gnu_cxx::__alloc_traits<std::allocator<std::pair<long long int, long long int> >, std::pair<long long int, long long int> >::value_type' {aka 'struct std::pair<long long int, long long int>'} has no member named 'push_back'
+   30 | #define pub push_back
+      |             ^~~~~~~~~
+main.cpp:678:22: note: in expansion of macro 'pub'
+  678 |                 e[v].pub({c,u});
+      |                      ^~~
+main.cpp:681:12: error: invalid types 'long long int[int]' for array subscript
+  681 |         vis[0]=1;
+      |            ^
+main.cpp:683:28: error: no matching function for call to 'begin(std::pair<long long int, long long int>&)'
+  683 |         for(auto [c,to]:e[0])
+      |                            ^
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:36,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/string:53,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/locale_classes.h:40,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/ios_base.h:41,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ios:44,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/ostream:40,
+                 from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/iostream:41,
+                 from main.cpp:1:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/initializer_list:88:5: note: candidate: 'template<class _Tp> constexpr const _Tp* std::begin(initializer_list<_Tp>)'
+   88 |     begin(initializer_list<_Tp> __ils) noexcept
+      |     ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/initializer_list:88:5: note:   template argument deduction/substitution failed:
+main.cpp:683:28: note:   'std::pair<long long int, long long int>' is not derived from 'std::initializer_list<_Tp>'
+  683 |         for(auto [c,to]:e[0])
+      |                            ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:52:5: note: candidate: 'template<class _Container> constexpr decltype (__cont.begin()) std::begin(_Container&)'
+   52 |     begin(_Container& __cont) -> decltype(__cont.begin())
+      |     ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:52:5: note:   template argument deduction/substitution failed:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h: In substitution of 'template<class _Container> constexpr decltype (__cont.begin()) std::begin(_Container&) [with _Container = std::pair<long long int, long long int>]':
+main.cpp:683:21:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:52:50: error: 'struct std::pair<long long int, long long int>' has no member named 'begin'
+   52 |     begin(_Container& __cont) -> decltype(__cont.begin())
+      |                                           ~~~~~~~^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:63:5: note: candidate: 'template<class _Container> constexpr decltype (__cont.begin()) std::begin(const _Container&)'
+   63 |     begin(const _Container& __cont) -> decltype(__cont.begin())
+      |     ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:63:5: note:   template argument deduction/substitution failed:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h: In substitution of 'template<class _Container> constexpr decltype (__cont.begin()) std::begin(const _Container&) [with _Container = std::pair<long long int, long long int>]':
+main.cpp:683:21:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:63:56: error: 'const struct std::pair<long long int, long long int>' has no member named 'begin'
+   63 |     begin(const _Container& __cont) -> decltype(__cont.begin())
+      |                                                 ~~~~~~~^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:95:5: note: candidate: 'template<class _Tp, long unsigned int _Nm> constexpr _Tp* std::begin(_Tp (&)[_Nm])'
+   95 |     begin(_Tp (&__arr)[_Nm]) noexcept
+      |     ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:95:5: note:   template argument deduction/substitution failed:
+main.cpp:683:28: note:   mismatched types '_Tp [_Nm]' and 'std::pair<long long int, long long int>'
+  683 |         for(auto [c,to]:e[0])
+      |                            ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:113:31: note: candidate: 'template<class _Tp> _Tp* std::begin(valarray<_Tp>&)'
+  113 |   template<typename _Tp> _Tp* begin(valarray<_Tp>&) noexcept;
+      |                               ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:113:31: note:   template argument deduction/substitution failed:
+main.cpp:683:28: note:   'std::pair<long long int, long long int>' is not derived from 'std::valarray<_Tp>'
+  683 |         for(auto [c,to]:e[0])
+      |                            ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:114:37: note: candidate: 'template<class _Tp> const _Tp* std::begin(const valarray<_Tp>&)'
+  114 |   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&) noexcept;
+      |                                     ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:114:37: note:   template argument deduction/substitution failed:
+main.cpp:683:28: note:   'std::pair<long long int, long long int>' is not derived from 'const std::valarray<_Tp>'
+  683 |         for(auto [c,to]:e[0])
+      |                            ^
+main.cpp:683:28: error: no matching function for call to 'end(std::pair<long long int, long long int>&)'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/initializer_list:99:5: note: candidate: 'template<class _Tp> constexpr const _Tp* std::end(initializer_list<_Tp>)'
+   99 |     end(initializer_list<_Tp> __ils) noexcept
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/initializer_list:99:5: note:   template argument deduction/substitution failed:
+main.cpp:683:28: note:   'std::pair<long long int, long long int>' is not derived from 'std::initializer_list<_Tp>'
+  683 |         for(auto [c,to]:e[0])
+      |                            ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:74:5: note: candidate: 'template<class _Container> constexpr decltype (__cont.end()) std::end(_Container&)'
+   74 |     end(_Container& __cont) -> decltype(__cont.end())
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:74:5: note:   template argument deduction/substitution failed:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h: In substitution of 'template<class _Container> constexpr decltype (__cont.end()) std::end(_Container&) [with _Container = std::pair<long long int, long long int>]':
+main.cpp:683:21:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:74:48: error: 'struct std::pair<long long int, long long int>' has no member named 'end'
+   74 |     end(_Container& __cont) -> decltype(__cont.end())
+      |                                         ~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:85:5: note: candidate: 'template<class _Container> constexpr decltype (__cont.end()) std::end(const _Container&)'
+   85 |     end(const _Container& __cont) -> decltype(__cont.end())
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:85:5: note:   template argument deduction/substitution failed:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h: In substitution of 'template<class _Container> constexpr decltype (__cont.end()) std::end(const _Container&) [with _Container = std::pair<long long int, long long int>]':
+main.cpp:683:21:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:85:54: error: 'const struct std::pair<long long int, long long int>' has no member named 'end'
+   85 |     end(const _Container& __cont) -> decltype(__cont.end())
+      |                                               ~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:106:5: note: candidate: 'template<class _Tp, long unsigned int _Nm> constexpr _Tp* std::end(_Tp (&)[_Nm])'
+  106 |     end(_Tp (&__arr)[_Nm]) noexcept
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:106:5: note:   template argument deduction/substitution failed:
+main.cpp:683:28: note:   mismatched types '_Tp [_Nm]' and 'std::pair<long long int, long long int>'
+  683 |         for(auto [c,to]:e[0])
+      |                            ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:115:31: note: candidate: 'template<class _Tp> _Tp* std::end(valarray<_Tp>&)'
+  115 |   template<typename _Tp> _Tp* end(valarray<_Tp>&) noexcept;
+      |                               ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:115:31: note:   template argument deduction/substitution failed:
+main.cpp:683:28: note:   'std::pair<long long int, long long int>' is not derived from 'std::valarray<_Tp>'
+  683 |         for(auto [c,to]:e[0])
+      |                            ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:116:37: note: candidate: 'template<class _Tp> const _Tp* std::end(const valarray<_Tp>&)'
+  116 |   template<typename _Tp> const _Tp* end(const valarray<_Tp>&) noexcept;
+      |                                     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:116:37: note:   template argument deduction/substitution failed:
+main.cpp:683:28: note:   'std::pair<long long int, long long int>' is not derived from 'const std::valarray<_Tp>'
+  683 |         for(auto [c,to]:e[0])
+      |                            ^
+main.cpp:684:23: error: no matching function for call to 'std::priority_queue<std::pair<long long int, long long int>, std::vector<std::pair<long long int, long long int> >, std::greater<std::pair<long long int, long long int> > >::push(<brace-enclosed initializer list>)'
+  684 |                 q.push({c,to});
+      |                 ~~~~~~^~~~~~~~
+In file included from /opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/queue:66,
+                 from main.cpp:5:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_queue.h:738:7: note: candidate: 'void std::priority_queue<_Tp, _Sequence, _Compare>::push(const value_type&) [with _Tp = std::pair<long long int, long long int>; _Sequence = std::vector<std::pair<long long int, long long int> >; _Compare = std::greater<std::pair<long long int, long long int> >; value_type = std::pair<long long int, long long int>]'
+  738 |       push(const value_type& __x)
+      |       ^~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_queue.h:738:30: note:   no known conversion for argument 1 from '<brace-enclosed initializer list>' to 'const std::priority_queue<std::pair<long long int, long long int>, std::vector<std::pair<long long int, long long int> >, std::greater<std::pair<long long int, long long int> > >::value_type&' {aka 'const std::pair<long long int, long long int>&'}
+  738 |       push(const value_type& __x)
+      |            ~~~~~~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_queue.h:746:7: note: candidate: 'void std::priority_queue<_Tp, _Sequence, _Compare>::push(value_type&&) [with _Tp = std::pair<long long int, long long int>; _Sequence = std::vector<std::pair<long long int, long long int> >; _Compare = std::greater<std::pair<long long int, long long int> >; value_type = std::pair<long long int, long long int>]'
+  746 |       push(value_type&& __x)
+      |       ^~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_queue.h:746:25: note:   no known conversion for argument 1 from '<brace-enclosed initializer list>' to 'std::priority_queue<std::pair<long long int, long long int>, std::vector<std::pair<long long int, long long int> >, std::greater<std::pair<long long int, long long int> > >::value_type&&' {aka 'std::pair<long long int, long long int>&&'}
+  746 |       push(value_type&& __x)
+      |            ~~~~~~~~~~~~~^~~
+main.cpp:690:23: error: invalid types 'long long int[std::tuple_element<1, std::pair<long long int, long long int> >::type {aka long long int}]' for array subscript
+  690 |                 if(vis[to]==0)
+      |                       ^
+main.cpp:692:28: error: invalid types 'long long int[std::tuple_element<1, std::pair<long long int, long long int> >::type {aka long long int}]' for array subscript
+  692 |                         vis[to]=1;
+      |                            ^
+main.cpp:694:47: error: no matching function for call to 'begin(std::pair<long long int, long long int>&)'
+  694 |                         for(auto[cst,nxt]:e[to])if(vis[nxt]==0)
+      |                                               ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/initializer_list:88:5: note: candidate: 'template<class _Tp> constexpr const _Tp* std::begin(initializer_list<_Tp>)'
+   88 |     begin(initializer_list<_Tp> __ils) noexcept
+      |     ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/initializer_list:88:5: note:   template argument deduction/substitution failed:
+main.cpp:694:47: note:   'std::pair<long long int, long long int>' is not derived from 'std::initializer_list<_Tp>'
+  694 |                         for(auto[cst,nxt]:e[to])if(vis[nxt]==0)
+      |                                               ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:52:5: note: candidate: 'template<class _Container> constexpr decltype (__cont.begin()) std::begin(_Container&)'
+   52 |     begin(_Container& __cont) -> decltype(__cont.begin())
+      |     ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:52:5: note:   template argument deduction/substitution failed:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h: In substitution of 'template<class _Container> constexpr decltype (__cont.begin()) std::begin(_Container&) [with _Container = std::pair<long long int, long long int>]':
+main.cpp:694:26:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:52:50: error: 'struct std::pair<long long int, long long int>' has no member named 'begin'
+   52 |     begin(_Container& __cont) -> decltype(__cont.begin())
+      |                                           ~~~~~~~^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:63:5: note: candidate: 'template<class _Container> constexpr decltype (__cont.begin()) std::begin(const _Container&)'
+   63 |     begin(const _Container& __cont) -> decltype(__cont.begin())
+      |     ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:63:5: note:   template argument deduction/substitution failed:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h: In substitution of 'template<class _Container> constexpr decltype (__cont.begin()) std::begin(const _Container&) [with _Container = std::pair<long long int, long long int>]':
+main.cpp:694:26:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:63:56: error: 'const struct std::pair<long long int, long long int>' has no member named 'begin'
+   63 |     begin(const _Container& __cont) -> decltype(__cont.begin())
+      |                                                 ~~~~~~~^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:95:5: note: candidate: 'template<class _Tp, long unsigned int _Nm> constexpr _Tp* std::begin(_Tp (&)[_Nm])'
+   95 |     begin(_Tp (&__arr)[_Nm]) noexcept
+      |     ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:95:5: note:   template argument deduction/substitution failed:
+main.cpp:694:47: note:   mismatched types '_Tp [_Nm]' and 'std::pair<long long int, long long int>'
+  694 |                         for(auto[cst,nxt]:e[to])if(vis[nxt]==0)
+      |                                               ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:113:31: note: candidate: 'template<class _Tp> _Tp* std::begin(valarray<_Tp>&)'
+  113 |   template<typename _Tp> _Tp* begin(valarray<_Tp>&) noexcept;
+      |                               ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:113:31: note:   template argument deduction/substitution failed:
+main.cpp:694:47: note:   'std::pair<long long int, long long int>' is not derived from 'std::valarray<_Tp>'
+  694 |                         for(auto[cst,nxt]:e[to])if(vis[nxt]==0)
+      |                                               ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:114:37: note: candidate: 'template<class _Tp> const _Tp* std::begin(const valarray<_Tp>&)'
+  114 |   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&) noexcept;
+      |                                     ^~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:114:37: note:   template argument deduction/substitution failed:
+main.cpp:694:47: note:   'std::pair<long long int, long long int>' is not derived from 'const std::valarray<_Tp>'
+  694 |                         for(auto[cst,nxt]:e[to])if(vis[nxt]==0)
+      |                                               ^
+main.cpp:694:47: error: no matching function for call to 'end(std::pair<long long int, long long int>&)'
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/initializer_list:99:5: note: candidate: 'template<class _Tp> constexpr const _Tp* std::end(initializer_list<_Tp>)'
+   99 |     end(initializer_list<_Tp> __ils) noexcept
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/initializer_list:99:5: note:   template argument deduction/substitution failed:
+main.cpp:694:47: note:   'std::pair<long long int, long long int>' is not derived from 'std::initializer_list<_Tp>'
+  694 |                         for(auto[cst,nxt]:e[to])if(vis[nxt]==0)
+      |                                               ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:74:5: note: candidate: 'template<class _Container> constexpr decltype (__cont.end()) std::end(_Container&)'
+   74 |     end(_Container& __cont) -> decltype(__cont.end())
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:74:5: note:   template argument deduction/substitution failed:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h: In substitution of 'template<class _Container> constexpr decltype (__cont.end()) std::end(_Container&) [with _Container = std::pair<long long int, long long int>]':
+main.cpp:694:26:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:74:48: error: 'struct std::pair<long long int, long long int>' has no member named 'end'
+   74 |     end(_Container& __cont) -> decltype(__cont.end())
+      |                                         ~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:85:5: note: candidate: 'template<class _Container> constexpr decltype (__cont.end()) std::end(const _Container&)'
+   85 |     end(const _Container& __cont) -> decltype(__cont.end())
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:85:5: note:   template argument deduction/substitution failed:
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h: In substitution of 'template<class _Container> constexpr decltype (__cont.end()) std::end(const _Container&) [with _Container = std::pair<long long int, long long int>]':
+main.cpp:694:26:   required from here
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:85:54: error: 'const struct std::pair<long long int, long long int>' has no member named 'end'
+   85 |     end(const _Container& __cont) -> decltype(__cont.end())
+      |                                               ~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:106:5: note: candidate: 'template<class _Tp, long unsigned int _Nm> constexpr _Tp* std::end(_Tp (&)[_Nm])'
+  106 |     end(_Tp (&__arr)[_Nm]) noexcept
+      |     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:106:5: note:   template argument deduction/substitution failed:
+main.cpp:694:47: note:   mismatched types '_Tp [_Nm]' and 'std::pair<long long int, long long int>'
+  694 |                         for(auto[cst,nxt]:e[to])if(vis[nxt]==0)
+      |                                               ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:115:31: note: candidate: 'template<class _Tp> _Tp* std::end(valarray<_Tp>&)'
+  115 |   template<typename _Tp> _Tp* end(valarray<_Tp>&) noexcept;
+      |                               ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:115:31: note:   template argument deduction/substitution failed:
+main.cpp:694:47: note:   'std::pair<long long int, long long int>' is not derived from 'std::valarray<_Tp>'
+  694 |                         for(auto[cst,nxt]:e[to])if(vis[nxt]==0)
+      |                                               ^
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:116:37: note: candidate: 'template<class _Tp> const _Tp* std::end(const valarray<_Tp>&)'
+  116 |   template<typename _Tp> const _Tp* end(const valarray<_Tp>&) noexcept;
+      |                                     ^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/range_access.h:116:37: note:   template argument deduction/substitution failed:
+main.cpp:694:47: note:   'std::pair<long long int, long long int>' is not derived from 'const std::valarray<_Tp>'
+  694 |                         for(auto[cst,nxt]:e[to])if(vis[nxt]==0)
+      |                                               ^
+main.cpp:696:39: error: no matching function for call to 'std::priority_queue<std::pair<long long int, long long int>, std::vector<std::pair<long long int, long long int> >, std::greater<std::pair<long long int, long long int> > >::push(<brace-enclosed initializer list>)'
+  696 |                                 q.push({cst,nxt});
+      |                                 ~~~~~~^~~~~~~~~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_queue.h:738:7: note: candidate: 'void std::priority_queue<_Tp, _Sequence, _Compare>::push(const value_type&) [with _Tp = std::pair<long long int, long long int>; _Sequence = std::vector<std::pair<long long int, long long int> >; _Compare = std::greater<std::pair<long long int, long long int> >; value_type = std::pair<long long int, long long int>]'
+  738 |       push(const value_type& __x)
+      |       ^~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_queue.h:738:30: note:   no known conversion for argument 1 from '<brace-enclosed initializer list>' to 'const std::priority_queue<std::pair<long long int, long long int>, std::vector<std::pair<long long int, long long int> >, std::greater<std::pair<long long int, long long int> > >::value_type&' {aka 'const std::pair<long long int, long long int>&'}
+  738 |       push(const value_type& __x)
+      |            ~~~~~~~~~~~~~~~~~~^~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_queue.h:746:7: note: candidate: 'void std::priority_queue<_Tp, _Sequence, _Compare>::push(value_type&&) [with _Tp = std::pair<long long int, long long int>; _Sequence = std::vector<std::pair<long long int, long long int> >; _Compare = std::greater<std::pair<long long int, long long int> >; value_type = std::pair<long long int, long long int>]'
+  746 |       push(value_type&& __x)
+      |       ^~~~
+/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/bits/stl_queue.h:746:25: note:   no known conversion for argument 1 from '<brace-enclosed initializer list>' to 'std::priority_queue<std::pair<long long int, long long int>, std::vector<std::pair<long long int, long long int> >, std::greater<std::pair<long long int, long long int> > >::value_type&&' {aka 'std::pair<long long int, long long int>&&'}
+  746 |       push(value_type&& __x)
+      |            ~~~~~~~~~~~~~^~~
